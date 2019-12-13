@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "4c311e62-b734-410a-ac3f-f1fdcb4d16de",
+		"name": "laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testtest",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "testtest",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2QxYTU5MGE3ZDBlOTc2ZWE3NWJhZDQ4ZWY4N2ViY2ExMGVlMDY4NmRiZDBjMzBlMmI2ZjNhZGU4MWM3MTUzZDc2YzZiZDkyNmQwOWRlMGEiLCJpYXQiOjE1NzYyNjk4MzksIm5iZiI6MTU3NjI2OTgzOSwiZXhwIjoxNjA3ODkyMjM5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.acfy6PiYmGqfZTO1VGLWhiYEHfy0wGA8xbhHVGUsNbo_DDU1B-kREsIZgyuH0QyZrUUmBZw55FmYh3x6p9UK4E_7Vb4Qvp3e1B1WNKcxVa1UE2Nj9MySUeWGsStbF9Kdo8LWQn7VFv3pwp_ndokRQnSQu_48aLJ6HCf-jvX1iiNyBOA4IAdqNKA8yKcD2QjIS_IkYSYDgVdeJQxS2Bc1TEG6s_p0hUm4EdIJwbKO_pSwT9bvMmna2-FMCqlimMpvc93CsRE8M72-U2RckUOz93PMU2mKScmJwofXtObFI7DPnG3VcVM-x7R_aYQg5pBacYW3rMXQwfSQuCiGj51q6FKh7RWO-q94l8kKzVIutC9_STWwPvZQpwB70002-YUhYPKvMOBybyZpdPYlhN7lMSqQT_fDhAKaraoipwwWrCzL17E0qTq_y7tF-5QSwEjDS8MMraJHvby8MS2jf8yuwlxEnCYxRTBtn9nPjmfkFjwanoQ8Ql4ekkIUJFihF96YL_gPefK59_oxo_KfibkfKCpFTJcgUkZGpVyoHcit7CmTOxldP3szukJJXBn4YGgAcmYeyKWLIwh-r1VJZ-vfnwnWuJCeLA3ezo3BoQP4Z8uSn_oFJFV5zDmvb8k_f1ORhvO_iiThcFknnWn5EJS2sqM0Ovy9vh7HyoeElDOQDkM",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"test@test.com\",\n\t\"password\":\"testtest\",\n\t\"remember_me\":true\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"name": "Content-Type",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGNhMjgwNmYyZjc4ZDAwNDAxNTIxNTUyOGY3NjZmY2ZhNzExYzZjNWFkMjIwNmYwMDM3NWY5YTdmYjk3ZWQwN2Q4ZmFhMGFhMjgzNmE4YjUiLCJpYXQiOjE1NzUzMTQ0NjQsIm5iZiI6MTU3NTMxNDQ2NCwiZXhwIjoxNjA2OTM2ODY0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NVownAeVc3Vdkrohhz-3DRUm4un07zwQ_EvLKNyP0nssiRzf-vo7UX8C1zaWX1fj3bSAxqR7fmi_NNwrHtNjpiNPcJdYF50rk37LShqLLoriliiIjiNJ21_KkjmWcJDWBcUQuBiB3cC1BIR1KclIgDfpPsOMryy2E--p4pflOtWqgwS_bUxnmYiPD4fWC2PgFmzGuozapMgDIUFZW7NbEUye__iL2sJxltFm38KSMukdSKK_O4wfkFvsJ5OYzK_6SZu0fRmZeSjer-hF5ruKwN9Xq-hcOxl7XWOBRQ0J_emsYRWdPIRUXOwDmjefWolxucMWnq_tU8WV0IztWVQCmY8tatzVmKEKihx6ak37qdFHmu2-KD6ciPErkA9m4xLu0g79mUv8ZJPhxiBTgkJnRb7FclbBxFvhE9cuF7d0QvvauwRChzG9dmrY2Rgkaob34WEAcJV3lvsXCitDZHnaZzku0HkJxHeMaP08sLP0lHk41CJyvmx-QBCU8k5ScaQWDYOHQwwJvFNGHSUzd0rx-wmcPbfVa0AfPEGgvstgciuVpAvW9ISufhr4VP4FRcJypvLkb7LBdzHzq--xfGsmN6lIc1ML28sNyr05XchHUBMVf_RahgsIfeQgx1GkCYflLdkG4gNSe9AGqXawbq8xFcv8VuLYA30-COH4Z_ZlOEk",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGNhMjgwNmYyZjc4ZDAwNDAxNTIxNTUyOGY3NjZmY2ZhNzExYzZjNWFkMjIwNmYwMDM3NWY5YTdmYjk3ZWQwN2Q4ZmFhMGFhMjgzNmE4YjUiLCJpYXQiOjE1NzUzMTQ0NjQsIm5iZiI6MTU3NTMxNDQ2NCwiZXhwIjoxNjA2OTM2ODY0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NVownAeVc3Vdkrohhz-3DRUm4un07zwQ_EvLKNyP0nssiRzf-vo7UX8C1zaWX1fj3bSAxqR7fmi_NNwrHtNjpiNPcJdYF50rk37LShqLLoriliiIjiNJ21_KkjmWcJDWBcUQuBiB3cC1BIR1KclIgDfpPsOMryy2E--p4pflOtWqgwS_bUxnmYiPD4fWC2PgFmzGuozapMgDIUFZW7NbEUye__iL2sJxltFm38KSMukdSKK_O4wfkFvsJ5OYzK_6SZu0fRmZeSjer-hF5ruKwN9Xq-hcOxl7XWOBRQ0J_emsYRWdPIRUXOwDmjefWolxucMWnq_tU8WV0IztWVQCmY8tatzVmKEKihx6ak37qdFHmu2-KD6ciPErkA9m4xLu0g79mUv8ZJPhxiBTgkJnRb7FclbBxFvhE9cuF7d0QvvauwRChzG9dmrY2Rgkaob34WEAcJV3lvsXCitDZHnaZzku0HkJxHeMaP08sLP0lHk41CJyvmx-QBCU8k5ScaQWDYOHQwwJvFNGHSUzd0rx-wmcPbfVa0AfPEGgvstgciuVpAvW9ISufhr4VP4FRcJypvLkb7LBdzHzq--xfGsmN6lIc1ML28sNyr05XchHUBMVf_RahgsIfeQgx1GkCYflLdkG4gNSe9AGqXawbq8xFcv8VuLYA30-COH4Z_ZlOEk"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6cb641e7-3bf1-48d6-b770-208c5362d1fc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f841ba9f-7f11-4dd9-a293-3f92dc062edb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
