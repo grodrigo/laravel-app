@@ -13,7 +13,7 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
+						"value": "application/json",
 						"type": "text"
 					},
 					{
@@ -27,22 +27,22 @@
 					"urlencoded": [
 						{
 							"key": "name",
-							"value": "test",
+							"value": "rulolp",
 							"type": "text"
 						},
 						{
 							"key": "email",
-							"value": "test@test.com",
+							"value": "rulolp@gmail.com",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "testtest",
+							"value": "rulolp",
 							"type": "text"
 						},
 						{
 							"key": "password_confirmation",
-							"value": "testtest",
+							"value": "rulolp",
 							"type": "text"
 						}
 					]
@@ -100,6 +100,45 @@
 						"api",
 						"auth",
 						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup_activate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup/activate/tmgiw3yLoYcn2Z0XUi6k0SV9BSWQ4gfUFZAEX6kR9pn4OjL2wX8Tz9KoMBzV",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup",
+						"activate",
+						"tmgiw3yLoYcn2Z0XUi6k0SV9BSWQ4gfUFZAEX6kR9pn4OjL2wX8Tz9KoMBzV"
 					]
 				}
 			},
